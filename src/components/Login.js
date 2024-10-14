@@ -1,4 +1,4 @@
-// src/components/Login.js
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
@@ -10,7 +10,7 @@ const Login = ({ setUser }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://0.0.0.0:1337/api/auth/local', {
+      const response = await axios.post('https://aynca-backend.onrender.com/api/auth/local', {
         identifier: email,
         password,
       });
